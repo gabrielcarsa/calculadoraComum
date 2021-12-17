@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Calculadora - WEB II</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora Web II - Gabriel Henrique Cardoso</h1>
+    </header>
+
+    <main>
+        <section class="calc">
+            <div class="calc-topo">
+                <div id="display"></div>
+                <input type="button" value="&#9668;" onclick="apagar()">
+                <input type="button" id="btn-limpar" value="Limpar" onclick="limpar()">
+            </div>
+            <div class="calc-btn">
+                <input type="button" value="7" onclick="mostrarCampos('7')">
+                <input type="button" value="8" onclick="mostrarCampos('8')">
+                <input type="button" value="9" onclick="mostrarCampos('9')">
+                <input type="button" value="+" id="operador-basico" onclick="mostrarCampos('+')">
+                <input type="button" value="4" onclick="mostrarCampos('4')">
+                <input type="button" value="5" onclick="mostrarCampos('5')">
+                <input type="button" value="6" onclick="mostrarCampos('6')">
+                <input type="button" value="-" id="operador-basico" onclick="mostrarCampos('-')">
+                <input type="button" value="1" onclick="mostrarCampos('1')">
+                <input type="button" value="2" onclick="mostrarCampos('2')">
+                <input type="button" value="3" onclick="mostrarCampos('3')">
+                <input type="button" value="x" id="operador-basico" onclick="mostrarCampos('*')">
+                <input type="button" value="0" onclick="mostrarCampos('0')">
+                <input type="button" value="," onclick="mostrarCampos('.')">
+                <input type="button" value="Resultado" id="resultado" onclick="exibirResultado()">
+                <input type="button" value="÷" id="operador-basico" onclick="mostrarCampos('/')">
+                <input type="button" value="Potência ao 2" id="operador-especial" onclick="mostrarCampos('pot')">
+                <input type="button" value="Fatorial" id="operador-especial" onclick="mostrarCampos('fat')">
+                <input type="button" value="Raiz quadrada" id="operador-especial" onclick="mostrarCampos('raiz')">
+            </div>
+        </section>
+
+        <!--Apresenta os erros, se houver-->
+        <div id="errors"></div>
+
+        <section class="legenda">
+            <div>
+                <h2>Legenda:</h2>
+                <p id="legenda-apagar">Apagar ou Limpar</p>
+                <p id="legenda-num">Números</p>
+                <p id="legenda-basicas">Operações Básicas</p>
+                <p id="legenda-outras">Outras Operações</p>
+                <p id="lengenda-resultado">Resultado</p>
+            </div>
+        </section>
+
+        <section class="social">
+            <div>
+                <a href="https://www.linkedin.com/in/gabrielcardos0/">
+                    <img src="img/linkedin.jpg" alt="Linkedin">
+                    <h3>gabrielcardos0 - conecte-se comigo no Linkedin</h3>
+                </a>
+            </div>
+            <div>
+                <a href="https://github.com/gabrielcarsa">
+                    <img src="img/gtiHub.jpg" alt="GitHub">
+                    <h3>gabrielcarsa - meu GitHub :)</h3>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <script defer src="script.js"></script>
+</body>
+</html>
